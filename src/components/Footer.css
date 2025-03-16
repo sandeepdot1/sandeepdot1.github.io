@@ -1,0 +1,19 @@
+.footer {
+    background-color: #ffffff;
+    border-top: 1px solid #ddd;
+    padding: 20px 0;
+    transition: background-color 0.3s;
+    text-align: center;
+  }
+  
+  body.dark .footer {
+    background-color: #333;
+    border-top: 1px solid #444;
+  }
+  
+  .footer-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
