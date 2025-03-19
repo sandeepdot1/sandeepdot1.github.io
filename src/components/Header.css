@@ -1,108 +1,179 @@
 .header {
-    background-color: #ffffff;
-    border-bottom: 1px solid #ddd;
-    padding: 20px 0;
-    transition: background-color 0.3s;
-  }
-  
-  body.dark .header {
-    background-color: #444;
-    border-bottom: 1px solid #555;
-  }
-  
+  background-color: #ffffff;
+  border-bottom: 3px solid #cb0f0f;
+  padding: 20px 0;
+  transition: background-color 0.3s;
+}
+
+body.dark .header {
+  background-color: #444;
+  border-bottom: 3px solid #cb0f0f;
+}
+
+.header-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 28px;
+  font-family: 'Georgia', serif;
+  color: #2c3e50;
+}
+
+body.dark .header h1 {
+  color: #fff;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+nav li {
+  margin-left: 20px;
+}
+
+/* Email text styling */
+.email-text {
+  font-weight: 600;
+  color: #2c3e50;
+  margin-right: 20px;
+}
+body.dark .email-text {
+  color: #fff;
+}
+
+nav a {
+  text-decoration: none;
+  color: #2c3e50;
+  font-weight: 600; /* Increased font weight */
+  transition: color 0.3s;
+}
+
+body.dark nav a {
+  color: #fff;
+}
+
+/* Hover effects for nav links in both themes */
+nav a:hover {
+  color: #007bff;
+}
+
+body.dark nav a:hover {
+  color: #99ccff;
+}
+
+/* Right side container for resume and toggle */
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+/* Resume Button Styles */
+.resume-container {
+  margin-right: 10px; /* Closer to the toggle */
+}
+
+.resume-btn {
+  display: inline-block;
+  padding: 8px 16px;
+  border: 1px solid #16883c;
+  border-radius: 4px;
+  color: #16883c;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.resume-btn:active,
+.resume-btn:focus {
+  background-color: #16883c;
+  color: #fff;
+  outline: none;
+}
+
+body.dark .resume-btn {
+  border-color: #20b149;
+  color: #20b149;
+}
+
+body.dark .resume-btn:active,
+body.dark .resume-btn:focus {
+  background-color: #20b149;
+  color: #fff;
+}
+
+/* Toggle Switch Styles */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: #ccc;
+  transition: 0.4s;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 26px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
+}
+
+input:checked + .slider:before {
+  transform: translateX(24px);
+}
+
+.toggle-container {
+  margin-left: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
   .header-container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
   }
-  
-  .header h1 {
-    margin: 0;
-    font-size: 28px;
-    font-family: 'Georgia', serif;
-    color: #2c3e50;
-  }
-  
-  body.dark .header h1 {
-    color: #fff; /* Brighter title in dark mode */
-  }
-  
   nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
+    margin-top: 10px;
   }
-  
-  nav li {
-    margin-left: 20px;
+  .header-right {
+    margin-top: 10px;
+    align-self: flex-end;
   }
-  
-  nav a {
-    text-decoration: none;
-    color: #2c3e50;
-    font-weight: 500;
-    transition: color 0.3s;
-  }
-  
-  body.dark nav a {
-    color: #fff;
-  }
-  
-  nav a:hover {
-    color: #007bff;
-  }
-  
-  /* Toggle Switch Styles */
-  .switch {
-    position: relative;
-    display: inline-block;
-    width: 50px;
-    height: 26px;
-  }
-  
-  .switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  
-  .slider {
-    position: absolute;
-    cursor: pointer;
-    background-color: #ccc;
-    transition: 0.4s;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 26px;
-  }
-  
-  .slider:before {
-    position: absolute;
-    content: "";
-    height: 20px;
-    width: 20px;
-    left: 3px;
-    bottom: 3px;
-    background-color: white;
-    transition: 0.4s;
-    border-radius: 50%;
-  }
-  
-  input:checked + .slider {
-    background: linear-gradient(45deg, #6a11cb, #2575fc);
-  }
-  
-  input:checked + .slider:before {
-    transform: translateX(24px);
-  }
-  
-  .toggle-container {
-    margin-left: 20px;
-  }
-  
+}
