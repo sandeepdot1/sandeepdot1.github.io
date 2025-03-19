@@ -1,49 +1,264 @@
+/* Overall About Section */
 .about-section {
-    padding: 60px 0;
-    background-color: #fefefe;
-    transition: background-color 0.3s;
+  padding: 60px 20px;
+  background-color: #fefefe;
+  transition: background-color 0.3s;
+}
+
+body.dark .about-section {
+  background-color: #2c2c2c;
+}
+
+/* Main container: side-by-side layout with increased gap */
+.about-main-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 50px; /* Increased gap between profile and timeline */
+}
+
+/* Profile Container (Left Column) */
+.profile-container {
+  flex: 1;
+  background-color: #fff;
+  padding: 20px;
+  border: 2px solid;
+  border-image: linear-gradient(to right, #000, #007bff) 1;
+  border-radius: 10px;
+  text-align: center; /* Center content horizontally */
+}
+
+body.dark .profile-container {
+  background-color: #444;
+  border-image: linear-gradient(to right, #fff, #66b2ff) 1;
+}
+
+.profile-picture {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%; /* Circular image */
+  object-fit: cover;
+  margin: 0 auto 20px; /* Center image and add margin at bottom */
+  border: 4px solid #007bff;
+}
+
+body.dark .profile-picture {
+  border: 4px solid #66b2ff;
+}
+
+/* Name and Designation in the same line */
+.name-designation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
+}
+
+/* Name Styling */
+.name {
+  font-size: 24px; /* Matching size with designation */
+  margin: 0;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+body.dark .name {
+  color: #fff;
+}
+
+/* Subtle color fade effect for designation */
+.designation {
+  font-size: 24px; /* Same as name */
+  font-weight: bold;
+  color: #007bff;
+  background: linear-gradient(to right, #007bff, #0056b3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0.9; /* Slight fade effect */
+}
+
+body.dark .designation {
+  color: #66b2ff;
+  background: linear-gradient(to right, #66b2ff, #3388ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0.9;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+body.dark .description {
+  color: #ddd;
+}
+
+.tech-skills h4 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #2c3e50;
+}
+
+body.dark .tech-skills h4 {
+  color: #fff;
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center; /* Center skills within container */
+}
+
+.skill {
+  background-color: #007bff;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+body.dark .skill {
+  background-color: #66b2ff;
+}
+
+/* Timeline Container (Right Column) */
+.timeline-container {
+  flex: 1;
+  padding: 20px;
+}
+
+.timeline-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  text-align: center;
+}
+
+body.dark .timeline-title {
+  color: #fff;
+}
+
+/* Timeline Styling */
+.timeline {
+  position: relative;
+  margin-left: 60px; /* Shift timeline to give space for timeline time */
+  padding-left: 20px;
+  border-left: 2px solid #007bff;
+}
+
+body.dark .timeline {
+  border-left: 2px solid #66b2ff;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 20px; /* Reduced space between timeline items */
+  padding-left: 50px; /* Provide space for timeline time */
+}
+
+.timeline-time {
+  position: absolute;
+  left: -130px; /* Adjust to avoid overlapping content */
+  top: 0;
+  font-size: 14px;
+  color: #007bff;
+  font-weight: bold;
+  width: 100px;
+  text-align: right;
+}
+
+body.dark .timeline-time {
+  color: #66b2ff;
+}
+
+.timeline-content {
+  background-color: #f7f7f7;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+body.dark .timeline-content {
+  background-color: #555;
+}
+
+/* Company Info within Timeline */
+.company-info {
+  display: flex;
+  align-items: center;
+}
+
+.company-image {
+  width: 60px;
+  height: 60px;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.company-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Square image: no border radius, no border */
+  border-radius: 0;
+}
+
+.company-details {
+  text-align: left;
+}
+
+.company {
+  font-size: 18px;
+  margin: 0;
+  color: #2c3e50;
+}
+
+body.dark .company {
+  color: #fff;
+}
+
+.role {
+  font-size: 16px;
+  margin: 5px 0;
+  color: #007bff;
+}
+
+body.dark .role {
+  color: #66b2ff;
+}
+
+.info {
+  font-size: 14px;
+  margin: 0;
+  color: #555;
+}
+
+body.dark .info {
+  color: #ddd;
+}
+
+/* Responsive: Stack columns on smaller screens */
+@media screen and (max-width: 768px) {
+  .about-main-container {
+    flex-direction: column;
+  }
+  .timeline {
+    margin-left: 30px;
+    padding-left: 10px;
+  }
+  .timeline-time {
+    left: -90px;
+    width: 80px;
+  }
+  .name-designation {
+    flex-direction: column; /* Stack name and designation for smaller screens */
     text-align: center;
   }
-  
-  body.dark .about-section {
-    background-color: #2c2c2c;
-  }
-  
-  .about-container {
-    width: 90%;
-    max-width: 800px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .profile-picture {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 20px;
-    border: 4px solid #007bff;
-  }
-  
-  .about-section h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    color: #34495e;
-  }
-  
-  body.dark .about-section h2 {
-    color: #fff; /* Brighter heading in dark mode */
-  }
-  
-  .about-section p {
-    font-size: 18px;
-    line-height: 1.6;
-    color: #555;
-  }
-  
-  body.dark .about-section p {
-    color: #ddd; /* Brighter paragraph text in dark mode */
-  }
-  
+}
