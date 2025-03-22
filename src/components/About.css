@@ -22,7 +22,7 @@ body.dark .about-section {
 .profile-container {
   flex: 1;
   background-color: #fff;
-  padding: 20px;
+  padding: 20px 20px 10px 20px; /* Top, Right, Bottom, Left; bottom reduced from 20px to 10px */
   border: 2px solid;
   border-image: linear-gradient(to right, #000, #007bff) 1;
   border-radius: 10px;
@@ -58,9 +58,9 @@ body.dark .profile-picture {
 
 /* Name Styling */
 .name {
-  font-size: 24px; /* Matching size with designation */
+  font-size: 20px; /* Matching size with designation */
   margin: 0;
-  font-weight: bold;
+  font-weight: 600;
   color: #2c3e50;
 }
 
@@ -70,13 +70,14 @@ body.dark .name {
 
 /* Subtle color fade effect for designation */
 .designation {
-  font-size: 24px; /* Same as name */
-  font-weight: bold;
+  font-size: 20px; /* Same as name */
+  font-weight: 600;
   color: #007bff;
   background: linear-gradient(to right, #007bff, #0056b3);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 0.9; /* Slight fade effect */
+  margin: 0;
 }
 
 body.dark .designation {
@@ -85,6 +86,7 @@ body.dark .designation {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 0.9;
+  margin: 0;
 }
 
 .description {
@@ -95,6 +97,7 @@ body.dark .designation {
 }
 
 body.dark .description {
+  margin-top: 0;
   color: #ddd;
 }
 
@@ -187,6 +190,11 @@ body.dark .timeline-time {
 
 body.dark .timeline-content {
   background-color: #555;
+}
+
+.timeline-content:hover {
+  transform: translateY(-3px) scale(1.01);
+  box-shadow: 0 6px 12px rgba(162, 147, 147, 0.2);
 }
 
 /* Company Info within Timeline */

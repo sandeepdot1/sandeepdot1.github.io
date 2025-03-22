@@ -1,6 +1,7 @@
 import React from 'react';
+import { FiExternalLink } from "react-icons/fi"; 
 import './Projects.css';
-import defaultImage from '../assets/profile.jpg'; // Place a default image here
+import defaultImage from '../assets/profile.jpg'; // Default image for projects without a video
 
 const projectsData = [
   {
@@ -8,7 +9,7 @@ const projectsData = [
     title: 'BLOG SITE',
     description: 'Developed a blogging site with features for creating, editing, and managing blogs using Flask, HTML, and Bootstrap, with MySql database for secure data storage.',
     link: 'https://github.com/sandeepdot1/Blog-Site',
-    video: 'https://www.youtube.com/embed/T94PHkuydcw', // Replace with actual URL
+    video: 'https://www.youtube.com/embed/T94PHkuydcw',
     techStacks: ['Python', 'Flask', 'MySql', 'HTML', 'Bootstrap', 'Jinja']
   },
   {
@@ -16,7 +17,7 @@ const projectsData = [
     title: 'MOVIE RECOMMENDER SYSTEM',
     description: 'Built a content-based movie recommendation system using movie names, actors, and genres, leveraging Kaggle datasets and the TMDB API for up-to-date movie data.',
     link: 'https://github.com/sandeepdot1/Movieflix',
-    // No video provided, will use default image
+    image: defaultImage, // Using image when video is not available
     techStacks: ['Python', 'Flask', 'Scikit-learn']
   },
   {
@@ -24,7 +25,7 @@ const projectsData = [
     title: 'Flight Fare Web App',
     description: 'Developed a web app for flight price prediction using Random Forest, achieving 91% accuracy. Applied feature engineering and EDA to optimize model performance.',
     link: 'https://github.com/sandeepdot1/Flight-Fare',
-    video: 'https://www.example.com/path-to-video3.mp4', // Replace with actual URL
+    video: 'https://www.example.com/path-to-video3.mp4',
     techStacks: ['Python', 'Flask', 'Pandas', 'Scikit-learn']
   },
   {
@@ -32,7 +33,7 @@ const projectsData = [
     title: 'AI-Powered Rock Paper Scissors',
     description: 'A Rock Paper Scissors game using OpenCV and a CNN, trained on hand gesture images. Built with Python, OpenCV, NumPy, and Keras for real-time gesture recognition.',
     link: 'https://github.com/sandeepdot1/Stone-paper-scissors-AI-Game',
-    // No video provided, will use default image
+    image: defaultImage, // Using image when video is not available
     techStacks: ['Python', 'keras', 'opencv', 'numpy']
   }
 ];
@@ -48,7 +49,7 @@ const Projects = () => {
               {project.video ? (
                 <video src={project.video} controls className="project-video" />
               ) : (
-                <img src={defaultImage} alt="Default Project" className="project-video" />
+                <img src={project.image || defaultImage} alt="Project Preview" className="project-image" />
               )}
             </div>
             <div className="project-details">
@@ -60,11 +61,18 @@ const Projects = () => {
               </div>
               <p>{project.description}</p>
               <a href={project.link} target="_blank" rel="noopener noreferrer">
-                View on GitHub
+                <span>View on GitHub</span>
+                <FiExternalLink style={{ margin: "0" }} />
               </a>
             </div>
           </div>
         ))}
+        {/* Show More Projects Button */}
+        <div className="show-more">
+          <a href="https://github.com/sandeepdot1" target="_blank" rel="noopener noreferrer" className="show-more-btn">
+            Show More Projects
+          </a>
+        </div>
       </div>
     </section>
   );

@@ -72,11 +72,11 @@ const About = () => {
         <div className="profile-container">
           <img src={profilePic} alt="Profile" className="profile-picture" />
           <div className="name-designation">
-            <h1 className="name">Sandeep, I am a</h1>
+            <h1 className="name">Hey There, I am a</h1>
             <h3 className="designation">Software Engineer</h3>
           </div>
           <p className="description">
-          Software Engineer with 2+ years of experience in designing and deploying scalable microservices. Proficient in
+          With over 2+ years of experience in designing and deploying scalable microservices. Proficient in
           Python, JavaScript, Node.js, Google Cloud, and Postgres. Skilled in Unit testing, API testing, Docker, and Jenkins.
           Committed to continuous learning and eager to leverage technical skills in a role that drives innovation.
           </p>
@@ -103,7 +103,7 @@ const About = () => {
                       <img src={exp.companyImage} alt={exp.company} />
                     </div>
                     <div className="company-details">
-                      <h3><a className="company" href={exp.link}>{exp.company}</a></h3>
+                      <h3><a className="company" href={exp.link} target="_blank" rel="noopener noreferrer">{exp.company}</a></h3>
                       <h4 className="role">{exp.role}</h4>
                       <p className="info">{exp.info}</p>
                     </div>
