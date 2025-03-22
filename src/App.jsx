@@ -7,7 +7,7 @@ import Footer from './components/Footer';
 import './App.css';
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
 
   useEffect(() => {
     document.body.className = darkMode ? 'dark' : '';

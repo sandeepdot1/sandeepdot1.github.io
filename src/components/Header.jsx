@@ -8,7 +8,7 @@ const Header = ({ darkMode, setDarkMode }) => {
         <h1 style={{ fontFamily: "sans-serif" }}>Sandeep Kumar Panigrahi</h1>
         <nav>
           <ul>
-            <li className="email-text">example@example.com</li>
+            <li className="email-text">sandeeppanigrahi3570@gmail.com</li>
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
           </ul>

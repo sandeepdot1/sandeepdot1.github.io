@@ -4,11 +4,11 @@ import { AiOutlineMail } from 'react-icons/ai';
 import { FaLinkedin, FaGithub, FaTwitter, FaPhoneAlt } from 'react-icons/fa';
 
 const contactsData = [
-  { id: 1, platform: 'Email', link: 'mailto:example@example.com', icon: <AiOutlineMail /> },
-  { id: 2, platform: 'LinkedIn', link: 'https://linkedin.com/in/yourprofile', icon: <FaLinkedin /> },
-  { id: 3, platform: 'GitHub', link: 'https://github.com/yourusername', icon: <FaGithub /> },
-  { id: 4, platform: 'Twitter', link: 'https://twitter.com/yourhandle', icon: <FaTwitter /> },
-  { id: 5, platform: 'Phone', link: 'tel:+1234567890', icon: <FaPhoneAlt /> }
+  { id: 1, platform: 'Email', link: 'mailto:sandeeppanigrahi3570@gmail.com', icon: <AiOutlineMail /> },
+  { id: 2, platform: 'LinkedIn', link: 'https://www.linkedin.com/in/sandeep-kumar-panigrahi/', icon: <FaLinkedin /> },
+  { id: 3, platform: 'GitHub', link: 'https://github.com/sandeepdot1', icon: <FaGithub /> },
+  { id: 4, platform: 'Twitter', link: 'https://x.com/sandeep_kp12', icon: <FaTwitter /> },
+  { id: 5, platform: 'Phone', link: 'tel:+916303232234', icon: <FaPhoneAlt /> }
 ];
 
 const Footer = () => {

@@ -1,38 +1,68 @@
 import React from 'react';
 import './About.css';
 import profilePic from '../assets/profile.jpg';
-// import company1 from '../assets/company1.jpg';
-// import company2 from '../assets/company2.jpg';
-// import company3 from '../assets/company3.jpg';
+import moroLogo from '../assets/mro_logo.jpeg';
+import ineuronLogo from '../assets/ineuron_logo.jpg';
+import widhyaLogo from '../assets/widhyaorg_logo.jpeg';
 
 const experienceData = [
   {
     id: 1,
-    company: 'Company One',
-    role: 'Software Engineer',
-    info: 'Developed scalable web applications and microservices.',
-    period: 'Jan 2020 - Present',
-    companyImage: profilePic,
+    company: 'MRO Corporation',
+    link: 'https://mrocorp.com/',
+    role: 'Software Developer',
+    info: 'Developed scalable web services, optimized CI/CD pipelines, automated data processing with Airflow, enhanced security with Snyk, integrated FHIR API data, built event-driven Cloud Functions, and optimized ETL workflows using Scala and Spark.',
+    period: 'July 2022 - Present',
+    companyImage: moroLogo,
   },
   {
     id: 2,
-    company: 'Company Two',
-    role: 'Frontend Developer',
-    info: 'Created interactive user interfaces and optimized performance.',
-    period: 'Jun 2018 - Dec 2019',
-    companyImage: profilePic,
+    company: 'INeuron.ai',
+    link: 'https://ineuron.ai/',
+    role: 'Project Intern',
+    info: 'Developed an image-based employee productivity analysis system by creating a 5000-image dataset, fine-tuning YOLOv5 for eye movement detection, and integrating results into a dashboard for daily productivity reports.',
+    period: 'May 2021 - August 2021',
+    companyImage: ineuronLogo,
   },
   {
     id: 3,
-    company: 'Company Three',
-    role: 'Intern',
-    info: 'Assisted in various development projects and QA testing.',
-    period: 'Jan 2018 - May 2018',
-    companyImage: profilePic,
+    company: 'Widhya',
+    link: 'https://widhya-7791d.web.app/',
+    role: 'Machine Learning Intern',
+    info: 'Developed machine learning models on four datasets, performed advanced data cleaning and feature engineering, and utilized Pandas, NumPy, and Scikit-learn for data analysis and visualization.',
+    period: 'Jan 2021 - Feb 2021',
+    companyImage: widhyaLogo,
   },
 ];
 
-const technicalSkills = ['React', 'Node.js', 'Express', 'MongoDB', 'GraphQL'];
+const technicalSkills = [
+  "Microservices",
+  "Rest APIs",
+  "Cloud Computing",
+  "Databases",
+  "CICD",
+  "Python",
+  "Javascript",
+  "Scala",
+  "SQL",
+  "HTML",
+  "Node.js",
+  "Google Cloud Platform (GCP)",
+  "Docker",
+  "Jenkins",
+  "Postgres",
+  "Cassandra",
+  "GraphQL",
+  "Flask",
+  "Express.js",
+  "Pytest",
+  "Falcon",
+  "Spark",
+  "Git/GitLab",
+  "Postman",
+  "Snyk",
+  "Jira"
+];
 
 const About = () => {
   return (
@@ -46,8 +76,9 @@ const About = () => {
             <h3 className="designation">Software Engineer</h3>
           </div>
           <p className="description">
-            I am a passionate software engineer with expertise in building scalable and robust applications.
-            I love solving complex challenges and continuously learning new technologies.
+          Software Engineer with 2+ years of experience in designing and deploying scalable microservices. Proficient in
+          Python, JavaScript, Node.js, Google Cloud, and Postgres. Skilled in Unit testing, API testing, Docker, and Jenkins.
+          Committed to continuous learning and eager to leverage technical skills in a role that drives innovation.
           </p>
           <div className="tech-skills">
             <h4>Technical Skills</h4>
@@ -72,7 +103,7 @@ const About = () => {
                       <img src={exp.companyImage} alt={exp.company} />
                     </div>
                     <div className="company-details">
-                      <h3 className="company">{exp.company}</h3>
+                      <h3><a className="company" href={exp.link}>{exp.company}</a></h3>
                       <h4 className="role">{exp.role}</h4>
                       <p className="info">{exp.info}</p>
                     </div>
