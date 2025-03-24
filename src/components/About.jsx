@@ -20,7 +20,7 @@ const experienceData = [
     company: 'INeuron.ai',
     link: 'https://ineuron.ai/',
     role: 'Project Intern',
-    info: 'Developed an image-based employee productivity analysis system by creating a 5000-image dataset, fine-tuning YOLOv5 for eye movement detection, and integrating results into a dashboard for daily productivity reports.',
+    info: 'Contributed to an image-based employee productivity analysis system by creating a dataset of 5,000+ images and fine-tuning YOLOv5 model for optimized outputs. The results were then integrated into a Tableau dashboard to generate daily reports',
     period: 'May 2021 - August 2021',
     companyImage: ineuronLogo,
   },
