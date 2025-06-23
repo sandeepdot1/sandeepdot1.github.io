@@ -16,7 +16,7 @@ const Header = ({ darkMode, setDarkMode }) => {
         <div className="header-right">
           <div className="resume-container">
             <a
-              href="https://drive.google.com/file/d/1R48BwG4prrY61fXbfgqP83CgRvBK9o9T/view?usp=sharing"  // Replace with your resume URL
+              href="https://drive.google.com/file/d/1Yb6kYSkIJfLE3kc1L3e8FiQMoAqa4oFL/view?usp=sharing"  // Replace with your resume URL
               target="_blank"
               rel="noopener noreferrer"
               className="resume-btn"
